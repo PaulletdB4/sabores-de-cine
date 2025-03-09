@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoración | Sabores de Cine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Efecto de zoom en imágenes */
+        .card img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Ocultar sección de detalles al inicio */
+        #detalleDecoracion {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/android-chrome-512x512.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Logo Sabores de Cine" class="logo-img">
+                <span class="ms-2">Sabores de Cine</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comida.html">Comida</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="decoracion.html">Decoración</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="modoOscuroBtn" class="btn btn-outline-light">🌙 Modo Oscuro</button>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-custom text-center py-4">
+        <h1>🎭 Crea el Ambiente Perfecto para tus Películas 🎬</h1>
+        <p>Transforma tu espacio con ideas creativas para disfrutar al máximo cada película.</p>
+    </header>
+
+    <!-- Sección de Ideas de Decoración -->
+    <section id="decoracionContainer" class="container my-5">
+        <h2 class="text-center mb-4">💡 Ideas de Decoración</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" onclick="mostrarDecoracion('cine_casa')">
+                    <img src="images/cine_casa.jpg" class="card-img-top" alt="Cine en Casa">
+                    <div class="card-body">
+                        <h5 class="card-title">🎥 Cine en Casa</h5>
+                        <p class="card-text">Crea un espacio acogedor con luces LED, proyector y asientos cómodos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="mostrarDecoracion('noche_tematica')">
+                    <img src="images/noche_tematica.jpg" class="card-img-top" alt="Noche Temática">
+                    <div class="card-body">
+                        <h5 class="card-title">🌟 Noche Temática</h5>
+                        <p class="card-text">Ambientación basada en películas como Harry Potter, Marvel o Disney.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="mostrarDecoracion('cine_aire_libre')">
+                    <img src="images/cine_aire_libre.jpg" class="card-img-top" alt="Cine al Aire Libre">
+                    <div class="card-body">
+                        <h5 class="card-title">🌳 Cine al Aire Libre</h5>
+                        <p class="card-text">Coloca una pantalla en el jardín con mantas y luces cálidas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Detalle de Decoración -->
+    <section id="detalleDecoracion" class="container my-5">
+        <button class="btn btn-secondary mb-4" onclick="volverALista()">🔙 Volver a la Lista</button>
+        <h2 id="detalleTitulo" class="text-center mb-4"></h2>
+        <img id="detalleImagen" class="img-fluid mx-auto d-block mb-3" src="" alt="" style="max-width: 800px;">
+        <p id="detalleDescripcion" class="text-center"></p>
+    </section>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Sabores de Cine. Todos los derechos reservados.</p>
+    
+        <!-- Redes Sociales -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+        </div>
+    
+        <button class="btn btn-outline-light" onclick="window.location.href='privacidad.html'">Política de Privacidad</button>
+    </footer>
+    
+    <!-- Agregar Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function mostrarDecoracion(tipo) {
+            let titulo = "";
+            let imagen = "";
+            let descripcion = "";
+
+            if (tipo === "cine_casa") {
+                titulo = "🎥 Cine en Casa";
+                imagen = "images/cine_casa.jpg";
+                descripcion = "Crea un espacio acogedor con luces LED, un proyector de alta calidad y asientos cómodos para disfrutar de tus películas favoritas como si estuvieras en el cine.";
+            } else if (tipo === "noche_tematica") {
+                titulo = "🌟 Noche Temática";
+                imagen = "images/noche_tematica.jpg";
+                descripcion = "Organiza una noche temática inspirada en tus películas favoritas. Decora con elementos de Harry Potter, Marvel o Disney y crea una experiencia mágica.";
+            } else if (tipo === "cine_aire_libre") {
+                titulo = "🌳 Cine al Aire Libre";
+                imagen = "images/cine_aire_libre.jpg";
+                descripcion = "Convierte tu jardín en un cine al aire libre. Usa un proyector, coloca mantas y cojines cómodos, y decora con luces cálidas para una experiencia increíble.";
+            }
+
+            // Ocultar la lista de decoraciones y mostrar el detalle
+            document.getElementById("decoracionContainer").style.display = "none";
+            document.getElementById("detalleDecoracion").style.display = "block";
+
+            // Llenar la sección de detalles
+            document.getElementById("detalleTitulo").textContent = titulo;
+            document.getElementById("detalleImagen").src = imagen;
+            document.getElementById("detalleDescripcion").textContent = descripcion;
+        }
+
+        function volverALista() {
+            document.getElementById("detalleDecoracion").style.display = "none";
+            document.getElementById("decoracionContainer").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

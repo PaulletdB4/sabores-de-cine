@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias y Artículos - Sabores de Cine">
+    <meta name="keywords" content="cine, comida, recetas, películas, noticias, blog">
+    <meta name="author" content="Paola E">
+    <title>Noticias | Sabores de Cine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/android-chrome-512x512.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Logo Sabores de Cine" class="logo-img">
+                <span class="ms-2">Sabores de Cine</span>
+            </a>          
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enlaces.html">Enlaces de Interés</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="modoOscuroBtn" class="btn btn-outline-light">🌙 Modo Oscuro</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="header-custom text-center py-4">
+        <h1>📰 Noticias y Artículos</h1>
+        <p>Descubre novedades y artículos sobre cine y gastronomía.</p>
+    </header>
+
+    <!-- Sección de Noticias -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/noticia1.jpg" class="card-img-top" alt="Nueva receta inspirada en películas">
+                    <div class="card-body">
+                        <h5 class="card-title">Recetas Inspiradas en Películas</h5>
+                        <p class="card-text">Descubre cómo preparar comidas basadas en tus películas favoritas.</p>
+                        <button class="btn btn-primary btn-noticia" data-title="Recetas Inspiradas en Películas" data-content="Conoce las mejores recetas inspiradas en películas clásicas y actuales. Desde el Ratatouille hasta la hamburguesa Krabby Patty.">Leer más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/noticia2.jpg" class="card-img-top" alt="Estrenos de cine con temáticas gastronómicas">
+                    <div class="card-body">
+                        <h5 class="card-title">Estrenos de Cine y Gastronomía</h5>
+                        <p class="card-text">Conoce los estrenos de cine que giran en torno a la comida y la cultura gastronómica.</p>
+                        <button class="btn btn-primary btn-noticia" data-title="Estrenos de Cine y Gastronomía" data-content="Explora las películas más recientes donde la comida es el centro de la historia.">Leer más</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/noticia3.jpg" class="card-img-top" alt="Decoración para noches de cine en casa">
+                    <div class="card-body">
+                        <h5 class="card-title">Decoración para Noches de Cine</h5>
+                        <p class="card-text">Ideas para ambientar tu espacio y disfrutar de una experiencia cinematográfica única.</p>
+                        <button class="btn btn-primary btn-noticia" data-title="Decoración para Noches de Cine" data-content="Aprende a crear el ambiente perfecto para una noche de cine en casa con luces LED, mantas cómodas y más.">Leer más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Sabores de Cine. Todos los derechos reservados.</p>
+
+        <!-- Redes Sociales -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+        </div>
+    </footer>
+
+    <!-- Modal de Noticias -->
+    <div class="modal fade" id="modalNoticia" tabindex="-1" aria-labelledby="modalNoticiaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalNoticiaLabel">Título de la Noticia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="modalNoticiaBody">
+                    Contenido de la noticia...
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Sabores de Cine. Todos los derechos reservados.</p>
+    
+        <!-- Redes Sociales -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+        </div>
+    
+        <button class="btn btn-outline-light" onclick="window.location.href='privacidad.html'">Política de Privacidad</button>
+    </footer>
+    
+    <!-- Agregar Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // --- MODAL PARA NOTICIAS ---
+            const botonesNoticias = document.querySelectorAll(".btn-noticia");
+            botonesNoticias.forEach(boton => {
+                boton.addEventListener("click", function () {
+                    const noticiaTitulo = this.getAttribute("data-title");
+                    const noticiaContenido = this.getAttribute("data-content");
+
+                    document.getElementById("modalNoticiaLabel").textContent = noticiaTitulo;
+                    document.getElementById("modalNoticiaBody").textContent = noticiaContenido;
+
+                    const modal = new bootstrap.Modal(document.getElementById("modalNoticia"));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+<script src="js/script.js"></script>
+</body>
+</html>

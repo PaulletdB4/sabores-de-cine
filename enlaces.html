@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enlaces de Interés - Sabores de Cine">
+    <meta name="keywords" content="cine, comida, recetas, películas, google maps, youtube">
+    <meta name="author" content="Paola E">
+    <title>Enlaces de Interés | Sabores de Cine</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/android-chrome-512x512.png" type="image/png">
+    
+    <!-- FontAwesome para iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Estilos personalizados */
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            color: #FFC107;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" class="logo-navbar"> Sabores de Cine
+            </a>            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="enlaces.html">Enlaces de Interés</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item">
+                        <button id="modoOscuroBtn" class="btn btn-outline-light">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="header-custom text-center py-4">
+        <h1>🔗 Enlaces de Interés 🎥</h1>
+        <p>Explora videos y ubicaciones relacionadas con el mundo del cine y la gastronomía.</p>
+    </header>
+
+    <!-- Contenido -->
+    <section class="container my-5">
+        <div class="row">
+
+            <!-- Sección 1: Ideas para Cine en Casa -->
+            <div class="col-md-6">
+                <h3 class="text-center">🏠 Cómo Crear un Cine en Casa</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/EibyPEkD3LQ" title="Ideas para cine en casa" allowfullscreen></iframe>
+                </div>
+                <p class="text-center mt-2">Consejos para ambientar tu espacio con luces, sonido y decoración.</p>
+            </div>
+
+            <!-- Sección 2: Recetas para una Noche de Películas -->
+            <div class="col-md-6">
+                <h3 class="text-center">🍿 Snacks para Noche de Películas</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/71F-fd-vlig" title="Recetas para cine en casa" allowfullscreen></iframe>
+                </div>
+                <p class="text-center mt-2">Prepara los mejores snacks y comidas inspiradas en películas.</p>
+            </div>
+        </div>
+
+        <!-- Sección 3: Google Maps - Ubicación de Cines en República Dominicana -->
+        <div class="row mt-5">
+            <div class="col-md-12 text-center">
+                <h3>📍 Encuentra un Cine en República Dominicana</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Caribbean%20Cinemas&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p>Encuentra los mejores cines en República Dominicana y disfruta de una experiencia única.</p>
+            </div>
+        </div>
+
+        <!-- Botones Google Earth -->
+        <div class="text-center mt-4">
+            <h3>🌍 Explora en Google Earth</h3>
+            <p>Descubre lugares de ventas de snacks y otros sitios de interés en República Dominicana.</p>
+            <a href="https://earth.google.com/web/search/tiendas+de+snacks+en+Rep%C3%BAblica+Dominicana" 
+                target="_blank" class="btn btn-primary btn-lg m-2">
+                🍪 Ver Tiendas de Snacks
+            </a>
+            <a href="https://earth.google.com/earth/d/130CNxXHR5A3SseNrfDXU4SurH-CCi5z9?usp=sharing" 
+                target="_blank" class="btn btn-success btn-lg m-2">
+                🎬 Explorar Lugares de Interés
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <p>&copy; 2025 Sabores de Cine. Todos los derechos reservados.</p>
+    
+        <!-- Redes Sociales -->
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" class="me-3"><i class="bi bi-twitter"></i></a>
+            <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+        </div>
+    
+        <button class="btn btn-outline-light" onclick="window.location.href='privacidad.html'">Política de Privacidad</button>
+    </footer>
+    
+    <!-- Agregar Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
