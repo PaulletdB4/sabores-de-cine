@@ -1,14 +1,12 @@
-/* ---------------------- */
-/*        ESTILOS GENERALES      */
-/* ---------------------- */
+
+/*ESTILOS GENERALES*/
+
 body {
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
 
-/* ---------------------- */
-/*        NAVBAR      */
 /* ---------------------- */
 .navbar-dark .navbar-brand {
     font-size: 1.5rem;
@@ -38,8 +36,6 @@ body {
 }
 
 /* ---------------------- */
-/*        HEADER      */
-/* ---------------------- */
 .header-custom {
     background-color: #FFC107;
     color: #222;
@@ -58,9 +54,7 @@ body {
     margin-top: 10px;
 }
 
-/* ---------------------- */
 /*        FOOTER      */
-/* ---------------------- */
 footer {
     background-color: #222;
     color: white;
@@ -79,11 +73,11 @@ footer {
     transform: scale(1.1);
 }
 
-/* ---------------------- */
+
 /*      POLÍTICA DE PRIVACIDAD      */
 /* ---------------------- */
 
-/* ✅ Modo CLARO: Fondo blanco y texto negro */
+/* Modo CLARO: Fondo blanco y texto negro */
 .privacidad-section,
 .white-box,
 .list-group-item,
@@ -104,22 +98,22 @@ footer {
     color: #d35400 !important; /* Naranja oscuro */
 }
 
-/* ✅ Listas más legibles en modo claro */
+/*Listas más legibles en modo claro */
 .privacidad-section .list-group-item {
     background-color: #f0f0f0 !important;
     color: #000 !important;
     border: 1px solid #ccc !important;
 }
 
-/* ---------------------- */
+
 /*      MODO OSCURO      */
-/* ---------------------- */
+
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* ✅ Modo OSCURO: Fondo oscuro y texto BLANCO */
+/* Modo OSCURO: Fondo oscuro y texto BLANCO */
 .dark-mode .privacidad-section,
 .dark-mode .white-box,
 .dark-mode .list-group-item,
@@ -129,7 +123,7 @@ footer {
     border: 1px solid #444 !important;
 }
 
-/* ✅ Forzar que los párrafos dentro de estas cajas sean blancos en modo oscuro */
+/*Forzar que los párrafos dentro de estas cajas sean blancos en modo oscuro */
 .dark-mode .privacidad-section p,
 .dark-mode .white-box p,
 .dark-mode .list-group-item p,
@@ -139,7 +133,7 @@ footer {
     color: #ffffff !important; /* Texto blanco */
 }
 
-/* ✅ Ajustar títulos en modo oscuro */
+/*Ajustar títulos en modo oscuro */
 .dark-mode .privacidad-section h1,
 .dark-mode .privacidad-section h2,
 .dark-mode .section-content h2 {
@@ -152,16 +146,15 @@ footer {
     color: #ffffff !important;
 }
 
-/* ---------------------- */
+
 /*      TARJETAS EN MODO OSCURO      */
-/* ---------------------- */
 .dark-mode .card {
     background-color: #1e1e1e !important;
     border: 1px solid #333;
     color: #ffffff !important;
 }
 
-/* ✅ Mejor hover de tarjetas en modo oscuro */
+/* Mejor hover de tarjetas en modo oscuro */
 .dark-mode .card:hover {
     background-color: #292929 !important;
     transform: translateY(-5px);
@@ -172,28 +165,27 @@ footer {
 /*      EFECTOS HOVER MEJORADOS      */
 /* ---------------------- */
 
-/* ✅ Hover en botones */
+/*  Hover en botones */
 .btn:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/* ✅ Hover en tarjetas */
+/*Hover en tarjetas */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* ✅ Hover en imágenes */
+/* Hover en imágenes */
 img:hover {
     filter: brightness(90%);
     transition: filter 0.3s ease-in-out;
 }
 
-/* ---------------------- */
+
 /*      ESTILOS PARA MODAL (VER RECETA)      */
-/* ---------------------- */
 .dark-mode .modal-content {
     background-color: #222 !important;
     color: white !important;
@@ -210,16 +202,15 @@ img:hover {
     border-top: 1px solid #444;
 }
 
-/* ✅ Mejor contraste en el modal */
+/*Mejor contraste en el modal */
 .dark-mode .modal-body h4,
 .dark-mode .modal-body p,
 .dark-mode .modal-body ul {
     color: white !important;
 }
 
-/* ---------------------- */
+
 /*      TARJETAS Y BOTONES      */
-/* ---------------------- */
 
 .card-img-top {
     width: 100%;
@@ -228,18 +219,18 @@ img:hover {
     border-radius: 10px 10px 0 0;
 }
 
-/* ✅ Animación al pasar el mouse en imágenes */
+/* Animación al pasar el mouse en imágenes */
 .card-img-top:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/* ✅ Asegurar visibilidad del texto en tarjetas */
+/* Asegurar visibilidad del texto en tarjetas */
 .dark-mode .text-muted {
     color: #ffffff !important;
 }
 
-/* ✅ Botones en modo oscuro */
+/*Botones en modo oscuro */
 .dark-mode .btn-primary {
     background-color: #FFC107;
     border-color: #FFC107;
@@ -251,9 +242,7 @@ img:hover {
     border-color: #d39e00;
 }
 
-/* ---------------------- */
-/*      ENLACES EN MODO OSCURO      */
-/* ---------------------- */
+
 
 .dark-mode a {
     color: #FFC107 !important;
@@ -263,3 +252,34 @@ img:hover {
 .dark-mode a:hover {
     text-decoration: underline;
 }
+
+/*EFECTO HOVER PARA TODAS LAS TARJETAS*/
+.card {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    overflow: hidden; /* Evita que los efectos sobresalgan */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: #FFC107; /* Amarillo dorado */
+}
+
+/*EFECTO EN LOS TÍTULOS DENTRO DE LAS TARJETAS */
+.card:hover h3,
+.card:hover h5 {
+    color: #FFC107; /* Amarillo dorado */
+    transition: color 0.3s ease-in-out;
+}
+
+/*EFECTO EN LAS IMÁGENES DENTRO DE LAS TARJETAS*/
+.card img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
