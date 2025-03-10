@@ -11,11 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- ALERTAS DE BIENVENIDA SEGÚN LA PÁGINA ---
     const currentPage = window.location.pathname.split("/").pop(); // Obtiene el nombre del archivo HTML
     switch (currentPage) {
-        case "index.html":
-            setTimeout(() => {
-                alert("🍿 ¡Bienvenido a Sabores de Cine! Descubre cómo hacer tu noche de películas increíble.");
-            }, 1000);
-            break;
         case "peliculas.html":
             setTimeout(() => {
                 alert("🎬 Bienvenido a la sección de Películas. Encuentra las mejores opciones para tu noche de cine.");
