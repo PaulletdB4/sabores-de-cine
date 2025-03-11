@@ -62,91 +62,51 @@ footer {
 .social-icons a {
     font-size: 1.5rem;
     color: #ffffff;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
     color: #FFC107;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* ---- EFECTOS HOVER ---- */
-.btn:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
+.btn {
+    transition: all 0.3s ease-in-out;
 }
 
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ---- TARJETAS (CARD) ---- */
 .card {
     transition: all 0.3s ease-in-out;
-    border: 2px solid transparent;
+    border: 2px solid #ddd;
+    border-radius: 12px;
     overflow: hidden;
+    background-color: white;
+    color: black;
 }
 
 .card:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    border-color: #FFC107; /* Color amarillo en modo claro */
+    border-color: #333;
+    transform: scale(1.03);
 }
 
-.card:hover h3,
-.card:hover h5 {
-    color: #FFC107;
-    transition: color 0.3s ease-in-out;
+.card h5 {
+    font-weight: bold;
 }
 
-/* ---- CONTENEDOR DE LAS TARJETAS ---- */
-.category-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaciado entre tarjetas */
-    flex-wrap: wrap;
+/* ---- EFECTO HOVER PARA IMÁGENES ---- */
+.card img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-/* ---- TARJETAS DE CATEGORÍA ---- */
-.category-card {
-    width: 100%;
-    max-width: 350px;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white; /* Modo claro */
-    color: black;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
-    border: 1px solid #ddd; /* Borde sutil */
-}
-
-/* ---- IMÁGENES UNIFORMES DENTRO DE LAS TARJETAS ---- */
-.category-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-/* ---- CONTENIDO DE LAS TARJETAS ---- */
-.category-card .card-body {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;
-}
-
-/* ---- EFECTO HOVER PARA TARJETAS ---- */
-.category-card:hover {
-    background-color: #FFC107;
-    color: black;
+.card:hover img {
     transform: scale(1.05);
-    box-shadow: 0px 10px 20px rgba(255, 193, 7, 0.3);
-}
-
-/* ---- EFECTO HOVER PARA EL TEXTO DE TARJETAS ---- */
-.category-card:hover h3,
-.category-card:hover p {
-    color: black;
+    filter: brightness(90%);
 }
 
 /* ---- MODO OSCURO ---- */
@@ -155,10 +115,116 @@ footer {
     color: #ffffff;
 }
 
+/* ---- TARJETAS EN MODO OSCURO ---- */
+.dark-mode .card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 2px solid #FFC107 !important;
+}
+
+.dark-mode .card:hover {
+    border-color: #ff8c00 !important;
+    box-shadow: 0px 10px 20px rgba(255, 140, 0, 0.5);
+}
+
+/* ---- BOTONES EN MODO OSCURO ---- */
+.dark-mode .btn-primary {
+    background-color: #FFC107 !important;
+    border-color: #FFC107 !important;
+    color: #222 !important;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+}
+
+/* ---- IMÁGENES EN MODO OSCURO ---- */
+.dark-mode .card img {
+    filter: brightness(90%);
+}
+
+/* ---- MODAL ---- */
+.modal-content {
+    background-color: white;
+    color: black;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #ddd;
+}
+
+/* ---- MODAL EN MODO OSCURO ---- */
+.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
+    color: white !important;
+    border: 2px solid #FFC107 !important;
+}
+
+.dark-mode .modal-content:hover {
+    border-color: #ff8c00;
+}
+
+/* ---- TARJETAS DE CATEGORÍA ---- */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch; /* 🔹 Asegurar que todas tengan el mismo tamaño */
+}
+
+.category-card {
+    flex: 1;
+    max-width: 350px;
+    min-width: 300px;
+    height: 600px; /* 🔹 Se asegura la misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    border: 2px solid #ddd;
+}
+
+/* ---- IMÁGENES EN TARJETAS ---- */
+.category-card img {
+    width: 100%;
+    height: 450px; /* 🔹 Misma altura para todas las imágenes */
+    object-fit: cover;
+}
+
+/* ---- CONTENIDO DE TARJETAS ---- */
+.category-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* ---- EFECTO HOVER PARA TARJETAS ---- */
+.category-card:hover {
+    background-color: #FFC107;
+    color: black;
+    transform: scale(1.05);
+    border-color: #333;
+    box-shadow: 0px 10px 20px rgba(255, 193, 7, 0.3);
+}
+
+.category-card:hover h3,
+.category-card:hover p {
+    color: black;
+}
+
 /* ---- MODO OSCURO PARA TARJETAS ---- */
 .dark-mode .category-card {
     background-color: black;
-    border: 1px solid #FFC107;
+    border: 2px solid #FFC107;
     color: white;
 }
 
@@ -166,10 +232,12 @@ footer {
     color: #FFC107;
 }
 
-/* ---- EFECTO HOVER EN MODO OSCURO ---- */
+/* ---- EFECTO HOVER EN TARJETAS EN MODO OSCURO ---- */
 .dark-mode .category-card:hover {
     background-color: #FFC107;
     color: black;
+    border-color: #ff8c00;
+    box-shadow: 0px 10px 20px rgba(255, 140, 0, 0.5);
 }
 
 .dark-mode .category-card:hover h3,
@@ -177,88 +245,25 @@ footer {
     color: black;
 }
 
-/* ---- MODAL DE COMIDA, PELÍCULAS Y DECORACIÓN ---- */
-.modal-content {
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
+/* ---- MEJORAR VISIBILIDAD DEL TEXTO EN TARJETAS CLARAS Y OSCURAS ---- */
+.card-body .text-muted {
+    color: #817070 !important;
 }
 
-/* ---- ESTILOS PARA EL TEXTO DENTRO DEL MODAL ---- */
-.modal-body h4,
-.modal-body p,
-.modal-body ul,
-.modal-body li {
-    color: black;
+.dark-mode .card-body .text-muted {
+    color: #fff !important;
 }
 
-/* ---- BOTÓN DE CERRAR MODAL ---- */
-.modal-header .btn-close {
-    filter: invert(1);
+/* ---- FORZAR QUE TODAS LAS TARJETAS SEAN DEL MISMO TAMAÑO ---- */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* ---- MODO OSCURO PARA EL MODAL ---- */
-.dark-mode .modal-content {
-    background-color: #1e1e1e !important;
-    color: white !important;
-}
-
-/* ---- TEXTO DENTRO DEL MODAL EN MODO OSCURO ---- */
-.dark-mode .modal-body h4,
-.dark-mode .modal-body p,
-.dark-mode .modal-body ul,
-.dark-mode .modal-body li {
-    color: white !important;
-}
-
-/* ---- BOTÓN DE CERRAR MODAL EN MODO OSCURO ---- */
-.dark-mode .modal-header .btn-close {
-    filter: invert(1);
-}
-
-/* ---- ESTILOS PARA LOS BOTONES EN EL MODAL ---- */
-.modal-footer .btn {
-    background-color: #FFC107;
-    color: black;
-    border-radius: 5px;
-}
-
-.modal-footer .btn:hover {
-    background-color: #e0a800;
-    color: black;
-}
-
-/* ---- MODO OSCURO: TARJETAS Y MODALES ---- */
-.dark-mode .modal-content {
-    background-color: black;
-    color: white;
-}
-
-.dark-mode .modal-footer .btn {
-    background-color: #FFC107;
-    color: black;
-}
-
-.dark-mode .modal-footer .btn:hover {
-    background-color: #e0a800;
-    color: black;
-}
-
-/* ---- Asegurar que en modo oscuro los textos del modal sean legibles ---- */
-.dark-mode .modal-body h4,
-.dark-mode .modal-body p,
-.dark-mode .modal-body ul,
-.dark-mode .modal-body li {
-    color: white !important;
-}
-
-/* ---- Asegurar que los botones dentro del modal en modo oscuro sean visibles ---- */
-.dark-mode .modal-footer .btn {
-    background-color: #FFC107;
-    color: black;
-}
-
-.dark-mode .modal-footer .btn:hover {
-    background-color: #e0a800;
+/* ---- IMÁGENES EN TARJETAS DE NOTICIAS ---- */
+.news-card img {
+    width: 100%;
+    height: 500px; /* 🔹 Misma altura para todas */
+    object-fit: cover;
 }

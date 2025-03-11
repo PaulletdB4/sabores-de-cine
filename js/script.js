@@ -94,4 +94,34 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("🌍 Abriendo redes sociales en una nueva pestaña...");
         });
     });
+
+    // --- AJUSTAR ALTURA DE TARJETAS AUTOMÁTICAMENTE ---
+    function ajustarAlturaTarjetas() {
+        let tarjetas = document.querySelectorAll(".news-card");
+        let maxAltura = 0;
+
+        // Resetear la altura antes de calcular (para evitar acumulación)
+        tarjetas.forEach(tarjeta => {
+            tarjeta.style.height = "auto";
+        });
+
+        // Obtener la altura máxima entre todas las tarjetas
+        tarjetas.forEach(tarjeta => {
+            let altura = tarjeta.offsetHeight;
+            if (altura > maxAltura) {
+                maxAltura = altura;
+            }
+        });
+
+        // Aplicar la misma altura a todas las tarjetas
+        tarjetas.forEach(tarjeta => {
+            tarjeta.style.height = maxAltura + "px";
+        });
+    }
+
+    // Ejecutar cuando se cargue la página
+    ajustarAlturaTarjetas();
+
+    // Volver a ejecutar cuando se cambia el tamaño de la ventana
+    window.addEventListener("resize", ajustarAlturaTarjetas);
 });
