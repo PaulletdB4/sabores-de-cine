@@ -1,5 +1,4 @@
 /*ESTILOS GENERALES*/
-
 body {
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s, color 0.3s;
@@ -92,7 +91,7 @@ footer {
 
 .card:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    border-color: #FFC107;
+    border-color: #FFC107;  /* Color amarillo en modo claro */
 }
 
 /* Cambio de color en los títulos dentro de tarjetas */
@@ -103,75 +102,8 @@ footer {
 }
 
 /* ---------------------- */
-/*      EFECTO HOVER EN "EXPLORA NUESTRAS CATEGORÍAS"      */
+/*      EFECTO HOVER EN MODO OSCURO      */
 /* ---------------------- */
-.category-container .card {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Cambio de color de fondo en tarjetas al pasar el mouse */
-.category-container .card:hover {
-    background-color: #FFC107;
-    color: black;
-}
-
-/* Cambio de color en el título */
-.category-container .card:hover h3 {
-    color: black;
-}
-
-/* Subrayado animado en títulos */
-.category-container .card h3 {
-    position: relative;
-    display: inline-block;
-}
-
-.category-container .card h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 3px;
-    background-color: #222;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-.category-container .card:hover h3::after {
-    transform: scaleX(1);
-}
-
-/* ---------------------- */
-/*      TARJETAS Y BOTONES      */
-/* ---------------------- */
-.card-img-top {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-}
-
-/* Imágenes dentro de las tarjetas sin efecto de zoom */
-.card img {
-    transition: filter 0.3s ease-in-out;
-}
-
-.card:hover img {
-    filter: brightness(90%);
-}
-
-/* ---------------------- */
-/*      MODO OSCURO      */
-/* ---------------------- */
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-/* Modo OSCURO: Fondo oscuro y texto BLANCO */
 .dark-mode .card {
     background-color: #1e1e1e !important;
     border: 1px solid #333;
@@ -182,13 +114,51 @@ footer {
     background-color: #292929 !important;
     transform: translateY(-5px);
     transition: all 0.3s ease-in-out;
+    border-color: #00ADB5 !important; /* Color azul/turquesa para resaltar en modo oscuro */
 }
 
-/*Mejor contraste en el modal */
+/* ---------------------- */
+/*      MODAL DE COMIDA      */
+/* ---------------------- */
+
+/* Asegurar que el modal de comida tenga fondo blanco siempre */
+#modalReceta .modal-content {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Estilizar títulos y texto dentro del modal */
+#modalReceta .modal-body h4,
+#modalReceta .modal-body p,
+#modalReceta .modal-body ul,
+#modalReceta .modal-body li {
+    color: black !important;
+}
+
+/* Asegurar que el botón de cerrar modal sea visible */
+#modalReceta .btn-close {
+    filter: invert(1);
+}
+
+/* ---------------------- */
+/*      MODO OSCURO      */
+/* ---------------------- */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Asegurar que el modal de comida NO cambie de color en modo oscuro */
+.dark-mode #modalReceta .modal-content {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Mejor contraste en el modal */
 .dark-mode .modal-body h4,
 .dark-mode .modal-body p,
 .dark-mode .modal-body ul {
-    color: white !important;
+    color: black !important;
 }
 
 /*Botones en modo oscuro */
@@ -203,6 +173,18 @@ footer {
     border-color: #d39e00;
 }
 
+/* Asegurar visibilidad del texto de recetas en modo oscuro */
+.dark-mode .card-body .text-muted {
+    color: white !important;
+}
+
+/* Asegurar que los títulos dentro de tarjetas sigan teniendo buen contraste */
+.dark-mode .card-title {
+    color: #FFC107 !important;
+}
+
+/* ---------------------- */
+/* Asegurar enlaces visibles */
 .dark-mode a {
     color: #FFC107 !important;
     text-decoration: none;
@@ -211,9 +193,3 @@ footer {
 .dark-mode a:hover {
     text-decoration: underline;
 }
-/* Solo afecta el texto dentro de la tarjeta de recetas */
-.dark-mode .card-body .text-muted {
-    color: white !important;
-}
-
-
