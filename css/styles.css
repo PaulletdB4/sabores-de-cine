@@ -1,11 +1,10 @@
-/*ESTILOS GENERALES*/
+/* ---- ESTILOS GENERALES ---- */
 body {
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* ---------------------- */
-/* --- NAVBAR --- */
+/* ---- NAVBAR ---- */
 .navbar-dark .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
@@ -24,7 +23,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* --- ESTILO PARA LOGO NAVBAR --- */
+/* ---- ESTILO PARA LOGO NAVBAR ---- */
 .navbar-brand img {
     width: 50px;
     height: 50px;
@@ -33,8 +32,7 @@ body {
     border: 2px solid white;
 }
 
-/* ---------------------- */
-/* --- HEADER --- */
+/* ---- HEADER ---- */
 .header-custom {
     background-color: #FFC107;
     color: #222;
@@ -53,14 +51,14 @@ body {
     margin-top: 10px;
 }
 
-/*        FOOTER      */
+/* ---- FOOTER ---- */
 footer {
     background-color: #222;
     color: white;
     padding: 15px 0;
 }
 
-/* --- REDES SOCIALES --- */
+/* ---- REDES SOCIALES ---- */
 .social-icons a {
     font-size: 1.5rem;
     color: #ffffff;
@@ -72,17 +70,12 @@ footer {
     transform: scale(1.1);
 }
 
-/* ---------------------- */
-/*      EFECTOS HOVER MEJORADOS      */
-/* ---------------------- */
-
-/*  Hover en botones */
+/* ---- EFECTOS HOVER ---- */
 .btn:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out;
 }
 
-/*Hover en tarjetas */
 .card {
     transition: all 0.3s ease-in-out;
     border: 2px solid transparent;
@@ -91,105 +84,181 @@ footer {
 
 .card:hover {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-    border-color: #FFC107;  /* Color amarillo en modo claro */
+    border-color: #FFC107; /* Color amarillo en modo claro */
 }
 
-/* Cambio de color en los títulos dentro de tarjetas */
 .card:hover h3,
 .card:hover h5 {
     color: #FFC107;
     transition: color 0.3s ease-in-out;
 }
 
-/* ---------------------- */
-/*      EFECTO HOVER EN MODO OSCURO      */
-/* ---------------------- */
-.dark-mode .card {
-    background-color: #1e1e1e !important;
-    border: 1px solid #333;
-    color: #ffffff !important;
+/* ---- CONTENEDOR DE LAS TARJETAS ---- */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre tarjetas */
+    flex-wrap: wrap;
 }
 
-.dark-mode .card:hover {
-    background-color: #292929 !important;
-    transform: translateY(-5px);
+/* ---- TARJETAS DE CATEGORÍA ---- */
+.category-card {
+    width: 100%;
+    max-width: 350px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white; /* Modo claro */
+    color: black;
     transition: all 0.3s ease-in-out;
-    border-color: #00ADB5 !important; /* Color azul/turquesa para resaltar en modo oscuro */
+    text-decoration: none;
+    border: 1px solid #ddd; /* Borde sutil */
 }
 
-/* ---------------------- */
-/*      MODAL DE COMIDA      */
-/* ---------------------- */
-
-/* Asegurar que el modal de comida tenga fondo blanco siempre */
-#modalReceta .modal-content {
-    background-color: white !important;
-    color: black !important;
+/* ---- IMÁGENES UNIFORMES DENTRO DE LAS TARJETAS ---- */
+.category-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
 }
 
-/* Estilizar títulos y texto dentro del modal */
-#modalReceta .modal-body h4,
-#modalReceta .modal-body p,
-#modalReceta .modal-body ul,
-#modalReceta .modal-body li {
-    color: black !important;
+/* ---- CONTENIDO DE LAS TARJETAS ---- */
+.category-card .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
 }
 
-/* Asegurar que el botón de cerrar modal sea visible */
-#modalReceta .btn-close {
-    filter: invert(1);
+/* ---- EFECTO HOVER PARA TARJETAS ---- */
+.category-card:hover {
+    background-color: #FFC107;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(255, 193, 7, 0.3);
 }
 
-/* ---------------------- */
-/*      MODO OSCURO      */
-/* ---------------------- */
+/* ---- EFECTO HOVER PARA EL TEXTO DE TARJETAS ---- */
+.category-card:hover h3,
+.category-card:hover p {
+    color: black;
+}
+
+/* ---- MODO OSCURO ---- */
 .dark-mode {
     background-color: #121212;
     color: #ffffff;
 }
 
-/* Asegurar que el modal de comida NO cambie de color en modo oscuro */
-.dark-mode #modalReceta .modal-content {
-    background-color: white !important;
-    color: black !important;
+/* ---- MODO OSCURO PARA TARJETAS ---- */
+.dark-mode .category-card {
+    background-color: black;
+    border: 1px solid #FFC107;
+    color: white;
 }
 
-/* Mejor contraste en el modal */
-.dark-mode .modal-body h4,
-.dark-mode .modal-body p,
-.dark-mode .modal-body ul {
-    color: black !important;
+.dark-mode .category-card h3 {
+    color: #FFC107;
 }
 
-/*Botones en modo oscuro */
-.dark-mode .btn-primary {
+/* ---- EFECTO HOVER EN MODO OSCURO ---- */
+.dark-mode .category-card:hover {
     background-color: #FFC107;
-    border-color: #FFC107;
-    color: #222;
+    color: black;
 }
 
-.dark-mode .btn-primary:hover {
-    background-color: #e0a800;
-    border-color: #d39e00;
+.dark-mode .category-card:hover h3,
+.dark-mode .category-card:hover p {
+    color: black;
 }
 
-/* Asegurar visibilidad del texto de recetas en modo oscuro */
-.dark-mode .card-body .text-muted {
+/* ---- MODAL DE COMIDA, PELÍCULAS Y DECORACIÓN ---- */
+.modal-content {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* ---- ESTILOS PARA EL TEXTO DENTRO DEL MODAL ---- */
+.modal-body h4,
+.modal-body p,
+.modal-body ul,
+.modal-body li {
+    color: black;
+}
+
+/* ---- BOTÓN DE CERRAR MODAL ---- */
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* ---- MODO OSCURO PARA EL MODAL ---- */
+.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
     color: white !important;
 }
 
-/* Asegurar que los títulos dentro de tarjetas sigan teniendo buen contraste */
-.dark-mode .card-title {
-    color: #FFC107 !important;
+/* ---- TEXTO DENTRO DEL MODAL EN MODO OSCURO ---- */
+.dark-mode .modal-body h4,
+.dark-mode .modal-body p,
+.dark-mode .modal-body ul,
+.dark-mode .modal-body li {
+    color: white !important;
 }
 
-/* ---------------------- */
-/* Asegurar enlaces visibles */
-.dark-mode a {
-    color: #FFC107 !important;
-    text-decoration: none;
+/* ---- BOTÓN DE CERRAR MODAL EN MODO OSCURO ---- */
+.dark-mode .modal-header .btn-close {
+    filter: invert(1);
 }
 
-.dark-mode a:hover {
-    text-decoration: underline;
+/* ---- ESTILOS PARA LOS BOTONES EN EL MODAL ---- */
+.modal-footer .btn {
+    background-color: #FFC107;
+    color: black;
+    border-radius: 5px;
+}
+
+.modal-footer .btn:hover {
+    background-color: #e0a800;
+    color: black;
+}
+
+/* ---- MODO OSCURO: TARJETAS Y MODALES ---- */
+.dark-mode .modal-content {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .modal-footer .btn {
+    background-color: #FFC107;
+    color: black;
+}
+
+.dark-mode .modal-footer .btn:hover {
+    background-color: #e0a800;
+    color: black;
+}
+
+/* ---- Asegurar que en modo oscuro los textos del modal sean legibles ---- */
+.dark-mode .modal-body h4,
+.dark-mode .modal-body p,
+.dark-mode .modal-body ul,
+.dark-mode .modal-body li {
+    color: white !important;
+}
+
+/* ---- Asegurar que los botones dentro del modal en modo oscuro sean visibles ---- */
+.dark-mode .modal-footer .btn {
+    background-color: #FFC107;
+    color: black;
+}
+
+.dark-mode .modal-footer .btn:hover {
+    background-color: #e0a800;
 }
